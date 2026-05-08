@@ -1,0 +1,23 @@
+#Percentage of players required to skip the night.
+# Default: 50
+# Range: 0 ~ 100
+sleep_percent = 50
+#List of messages, from which one will be shown, when a player goes to bed
+#(Available parameters: %player% = Player name)
+sleep_messages = ["%player% is catching some zZzZz.", "Beddy bed time for %player%.", "'Honk shoe, Honk shoe,' says %player%", "%player% is going to bed.", "%player% is hittin' the hay.", "%player% gave up on being awake.", "%player% is dozin' off.", "%player% will start counting sheep now."]
+#List of messages, from which one will be shown, when a player leaves his bed
+#(Available parameters: %player% = Player name)
+wake_messages = ["%player% got up.", "%player% changed their mind about sleep.", "%player% needs to get a new matress first.", "%player% has awoken.", "%player% has cancelled their sleep subscription.", "%player% got out of bed."]
+#List of messages, from which one will be shown, when the night was skipped
+morning_messages = ["Good Morning!", "Wakey wakey!", "Up and at 'em!", "Cock-a-doodle-doo!", "Sun's up, and so should you!", "Daytime has arrived.", "'/time set day' moment"]
+#If true, the time since last rest is reset for all players, if enough other players are successfully sleeping. So not every player has to sleep to prevent phantom spawning for him.
+all_players_rest = false
+#If dimension_list_type is set to SLEEP_ACTIVE, the list is the list of dimensions in which the sleep voting is active.
+#If dimension_list_type is set to SLEEP_INACTIVE, the list is the list of dimensions in which the sleep voting is inactive.
+dimensions = ["minecraft:overworld"]
+#If dimension_list_type is set to SLEEP_ACTIVE, the dimension list is the list of dimensions in which the sleep voting is active.
+#If dimension_list_type is set to SLEEP_INACTIVE, the dimension list is the list of dimensions in which the sleep voting is inactive.
+#Allowed Values: SLEEP_ACTIVE, SLEEP_INACTIVE
+dimension_list_type = "SLEEP_ACTIVE"
+#Block names of beds being ignored for sleep percentage.
+block_blacklist = []

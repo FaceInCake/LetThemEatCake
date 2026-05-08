@@ -30,4 +30,4 @@
 	#The number of successful biome searches before the compass breaks and must be repaired. Set to 0 to disable durability.
 	# Default: 0
 	# Range: 0 ~ 10000
-	compassDurability = 16
+	compassDurability = 4

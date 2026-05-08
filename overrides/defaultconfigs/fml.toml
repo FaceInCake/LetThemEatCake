@@ -13,9 +13,9 @@ disableOptimizedDFU = true
 #Early window provider
 earlyWindowProvider = "drippy_early_window"
 #Early window width
-earlyWindowWidth = 1280
+earlyWindowWidth = 1664
 #Early window height
-earlyWindowHeight = 768
+earlyWindowHeight = 936
 #Early window framebuffer scale
 earlyWindowFBScale = 1
 #Early window starts maximized
