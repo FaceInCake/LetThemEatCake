@@ -1,0 +1,95 @@
+[milestones]
+	#Number of hearts you start out with.
+	# Default: 10
+	# Range: 0 ~ 1000
+	baseHearts = 5
+	#Number of hearts you gain for reaching a new milestone.
+	# Default: 2
+	# Range: 0 ~ 1000
+	heartsPerMilestone = 1
+	#A list of numbers of unique foods you need to eat to unlock each milestone, in ascending order. Naturally, adding more milestones lets you earn more hearts.
+	milestones = [3, 7, 12, 17, 23, 35, 45, 55, 65, 75, 90, 115, 130, 145, 160]
+
+[filtering]
+	#Foods in this list won't affect the player's health nor show up in the food book.
+	blacklist = [
+		"farmersdelight:raw_pasta",
+		"mynethersdelight:raw_stuffed_hoglin",
+		"delightfulcreators:incomplete_chicken_sandwich",
+		"delightfulcreators:incomplete_hamburger",
+		"delightfulcreators:incomplete_roasted_mutton_chops",
+		"delightfulcreators:incomplete_fried_rice",
+		"delightfulcreators:incomplete_bacon_and_eggs",
+		"delightfulcreators:incomplete_mutton_wrap",
+		"pipeorgans:incomplete_posaune",
+		"pipeorgans:incomplete_vox_humana",
+		"delightfulcreators:incomplete_egg_sandwich",
+		"delightfulcreators:incomplete_shepherds_pie",
+		"delightfulcreators:incomplete_steak_and_potatoes",
+		"delightfulcreators:incomplete_stuffed_potato",
+		"delightfulcreators:incomplete_rice_roll_medley",
+		"delightfulcreators:incomplete_apple_pie",
+		"delightfulcreators:incomplete_vegetable_noodles",
+		"delightfulcreators:incomplete_nether_salad",
+		"delightfulcreators:incomplete_pumpkin_pie",
+		"delightfulcreators:incomplete_squid_ink_pasta",
+		"delightfulcreators:incomplete_horse_feed",
+		"delightfulcreators:incomplete_mixed_salad",
+		"delightfulcreators:incomplete_fruit_salad",
+		"delightfulcreators:incomplete_pasta_with_meatballs",
+		"delightfulcreators:incomplete_honey_glazed_ham",
+		"delightfulcreators:incomplete_roast_chicken",
+		"delightfulcreators:incomplete_pasta_with_mutton_chop",
+		"delightfulcreators:incomplete_dumplings",
+		"delightfulcreators:incomplete_sweet_berry_cheesecake",
+		"delightfulcreators:incomplete_grilled_salmon",
+		"delightfulcreators:incomplete_mushroom_rice",
+		"delightfulcreators:incomplete_stuffed_pumpkin",
+		"delightfulcreators:incomplete_bacon_sandwich",
+		"delightfulcreators:incomplete_pasta_dish",
+		"endersdelight:mite_crust",
+		"farmersdelight:pie_crust",
+		"mynethersdelight:ghast_doug",
+		"mynethersdelight:ghast_sourdough",
+		"farmersdelight:wheat_dough",
+		"minecraft:beef",
+		"minecraft:porkchop",
+		"minecraft:chicken",
+		"minecraft:mutton",
+		"minecraft:carrot",
+		"minecraft:rabbit",
+		"minecraft:rotten_flesh",
+		"minecraft:spider_eye",
+		"minecraft:suspicious_stew",
+		"minecraft:ominous_bottle",
+		"minecraft:pufferfish",
+		"minecraft:tropical_fish",
+		"farmersdelight:cod_slice",
+		"minecraft:cod",
+		"minecraft:salmon",
+		"farmersdelight:salmon_slice",
+		"minecraft:potato",
+		"minecraft:poisonous_potato",
+		"mynethersdelight:hoglin_loin",
+		"mynethersdelight:hoglin_sausage",
+		"farmersdelight:ham",
+		"biomeswevegone:oddion_bulb",
+		"farmersdelight:minced_beef",
+		"farmersdelight:chicken_cuts",
+		"farmersdelight:mutton_chops",
+		"farmersdelight:bacon",
+		"farmersdelight:dog_food",
+		"farmersdelight:tomato_sauce"
+	]
+	#When this list contains anything, the blacklist is ignored and instead only foods from here count.
+	whitelist = []
+	#The minimum hunger value foods need to provide in order to count for milestones, in half drumsticks.
+	# Default: 1
+	# Range: 0 ~ 1000
+	minimumFoodValue = 0
+
+[miscellaneous]
+	#Whether or not to reset the food list on death, effectively losing all bonus hearts.
+	resetOnDeath = false
+	#If true, eating foods outside of survival mode (e.g. creative/adventure) is not tracked and thus does not contribute towards progression.
+	limitProgressionToSurvival = false
