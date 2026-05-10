@@ -1,0 +1,218 @@
+[
+  {
+    "id": "f1189bc3-3e66-42f7-a7de-7684a13a3ea6",
+    "name": "Hotbar",
+    "entries": [
+      {
+        "key": "key.hotbar.1",
+        "title": "Hotbar Slot 1"
+      },
+      {
+        "key": "key.hotbar.2",
+        "title": "Hotbar Slot 2"
+      },
+      {
+        "key": "key.hotbar.3",
+        "title": "Hotbar Slot 3"
+      },
+      {
+        "key": "key.hotbar.4",
+        "title": "Hotbar Slot 4"
+      },
+      {
+        "key": "key.hotbar.5",
+        "title": "Hotbar Slot 5"
+      },
+      {
+        "key": "key.hotbar.6",
+        "title": "Hotbar Slot 6"
+      },
+      {
+        "key": "key.hotbar.7",
+        "title": "Hotbar Slot 7"
+      },
+      {
+        "key": "key.hotbar.8",
+        "title": "Hotbar Slot 8"
+      },
+      {
+        "key": "key.hotbar.9",
+        "title": "Hotbar Slot 9"
+      }
+    ]
+  },
+  {
+    "id": "786fac3b-1cac-4940-92c7-1772c9e2f2bb",
+    "name": "Creative",
+    "entries": [
+      {
+        "key": "key.pickItem",
+        "title": "Pick Block"
+      },
+      {
+        "key": "key.loadToolbarActivator",
+        "title": "Load Hotbar Activator"
+      },
+      {
+        "key": "key.saveToolbarActivator",
+        "title": "Save Hotbar Activator"
+      },
+      {
+        "key": "key.jei.toggleEditMode",
+        "title": "Toggle Hide Ingredients Mode"
+      },
+      {
+        "key": "key.entityculling.toggle",
+        "title": "Debug toggle culling"
+      }
+    ]
+  },
+  {
+    "id": "d3e84e13-cb65-419f-9fe2-18664d05f6b4",
+    "name": "Menus",
+    "entries": [
+      {
+        "key": "key.pingwheel.open_settings",
+        "title": "Ping Settings",
+        "icon": {
+          "id": "minecraft:spyglass",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.modernfix.config",
+        "title": "ModernFix Configs",
+        "icon": {
+          "id": "create:empty_schematic",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.journeymap.fullscreen_waypoints",
+        "title": "Waypoint Manager",
+        "icon": {
+          "id": "minecraft:beacon",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.pipeorgans.midi_config",
+        "title": "MIDI Configs",
+        "icon": {
+          "id": "create:steam_whistle",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.configured.open_mod_list",
+        "title": "Open Mod List",
+        "icon": {
+          "id": "create:schedule",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.socialInteractions",
+        "title": "Socials",
+        "icon": {
+          "id": "minecraft:player_head",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.advancements",
+        "title": "Advancements",
+        "icon": {
+          "id": "mynethersdelight:golden_trophy",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.corpse.death_history",
+        "title": "Death History",
+        "icon": {
+          "id": "minecraft:skeleton_skull",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.journeymap.map_toggle_alt",
+        "title": "Fullscreen Map",
+        "icon": {
+          "id": "minecraft:map",
+          "count": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "9f45fa4c-0082-4d73-9ad9-baeae677abe0",
+    "name": "MiniMap",
+    "entries": [
+      {
+        "key": "key.journeymap.create_waypoint",
+        "title": "Create Waypoint",
+        "icon": {
+          "id": "minecraft:beacon",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.journeymap.minimap_toggle_alt",
+        "title": "Toggle MiniMap",
+        "icon": {
+          "id": "minecraft:compass",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.journeymap.toggle_waypoints",
+        "title": "Toggle All Waypoints",
+        "icon": {
+          "id": "minecraft:ender_eye",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.journeymap.toggle_render_waypoints_world",
+        "title": "Toggle Waypoint Beacons",
+        "icon": {
+          "id": "minecraft:spyglass",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.journeymap.toggle_entity_names",
+        "title": "Toggle Entity Names",
+        "icon": {
+          "id": "minecraft:creeper_head",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.journeymap.minimap_preset",
+        "title": "Change MiniMap Border",
+        "icon": {
+          "id": "create:filter",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.journeymap.minimap_type",
+        "title": "Change Map Type",
+        "icon": {
+          "id": "minecraft:grass_block",
+          "count": 1
+        }
+      },
+      {
+        "key": "key.journeymap.map_toggle_alt",
+        "title": "Fullscreen Map",
+        "icon": {
+          "id": "exposure:photograph_frame",
+          "count": 1
+        }
+      }
+    ]
+  }
+]
