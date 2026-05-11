@@ -3,41 +3,36 @@ PlayerEvents.loggedIn(event => {
     const player = event.player;
     const server = event.server;
 
-    if (!player.stages.has('welcome_shown')) {
-        player.stages.add('welcome_shown');
+	function tellDelayed(delaySeconds, message) {
+		server.scheduleInTicks(20 * delaySeconds, () => {
+			player.tell(message);
+		});
+	}
 
-        // Helper for delayed messages
-        function tellDelayed(delaySeconds, message) {
-            server.scheduleInTicks(20 * delaySeconds, () => {
-                player.tell(message);
-            });
-        }
+	function key(text) {
+		return Text.of(text).color('#00FFFF');
+	}
 
-        // Hardcoded cyan key
-        function key(text) {
-            return Text.of(text).color('cyan');
-        }
+    if (!player.stages.has('cake_welcome_shown')) {
+        player.stages.add('cake_welcome_shown');
 
-        tellDelayed(1, Text.of('Welcome Mr. ' + player.name + '!'));
-        tellDelayed(2, Text.of('Hold ').append(key('[R]')).append(Text.of(' for map controls')));
-        tellDelayed(3, Text.of('Hold ').append(key('[G]')).append(Text.of(' for opening various menus')));
-        tellDelayed(4, Text.of('')
+        tellDelayed(15, Text.of(`Welcome Mr. ${player.name.getString()}!`));
+        tellDelayed(17, Text.of('Hold ').append(key('[R]')).append(Text.of(' for map controls')));
+        tellDelayed(19, Text.of('Hold ').append(key('[G]')).append(Text.of(' for opening various menus')));
+        tellDelayed(21, Text.of('')
             .append(key('[Z]')).append(Text.of(' zoom - '))
             .append(key('[X/C]')).append(Text.of(' jetpack - '))
-            .append(key('[V]')).append(Text.of(' third person - '))
+            .append(key('[V]')).append(Text.of(' 3rd person - '))
             .append(key('[B]')).append(Text.of(' backpack'))
         );
-        tellDelayed(5, Text.of('There are a bunch of ').append(Text.of('bookmarked items').gold()).append(Text.of(' to showcase the various functional mods')));
-        tellDelayed(6, Text.of('Eat unique food items to increase your max health, check the food book!').green());
+        tellDelayed(23, Text.of('Ive tried to frontload important items in the JEI list, and put decorative blocks in the back.'));
+		tellDelayed(25, Text.of('You can also view the ').append(Text.of('Advancements').green()).append(Text.of(' for quests that can be done.')));
+        tellDelayed(27, Text.of('Eat unique food items to increase your max health, check the food book!').green());
     } else {
-        const time = player.level.getDayTime() % 24000;
-        const isDaytime = time < 13000;
-        const timeText = isDaytime ? 'daytime' : 'nighttime';
-        const timeColor = isDaytime ? 'gold' : 'dark_purple';
-
+        let currentTime = player.level.getDayTime() % 24000;
+		let timeText = currentTime < 13000 ? Text.of('daytime').gold() : Text.of('nighttime').color('#340739');
         player.tell(
-            Text.of('Welcome back ' + player.name + ', ').white()
-                .append(Text.of('it is currently ' + timeText + '.').color(timeColor))
+            Text.of(`Welcome back ${player.name.getString()}, it is currently `).append(timeText).append(Text.of('.'))
         );
     }
 });
