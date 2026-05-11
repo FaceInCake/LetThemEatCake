@@ -39,6 +39,10 @@ key_key.hotbar.7:key.keyboard.7:
 key_key.hotbar.8:key.keyboard.8:
 key_key.hotbar.9:key.keyboard.9:
 key_key.modernfix.config:key.keyboard.unknown:
+key_iris.keybind.reload:key.keyboard.f8:
+key_iris.keybind.toggleShaders:key.keyboard.unknown:
+key_iris.keybind.shaderPackSelection:key.keyboard.unknown:
+key_iris.keybind.wireframe:key.keyboard.unknown:
 key_key.exposure.camera_controls:key.mouse.middle:
 key_key.corpse.death_history:key.keyboard.unknown:
 key_key.jetpack.toggle_active.description:key.keyboard.c:
@@ -64,7 +68,7 @@ key_key.jei.cheatOneItem2:key.keyboard.unknown:
 key_key.jei.cheatItemStack:key.mouse.left:SHIFT
 key_key.jei.cheatItemStack2:key.keyboard.unknown:
 key_key.jei.toggleCheatModeConfigButton:key.mouse.left:CONTROL
-key_key.jei.toggleEditMode:key.keyboard.unknown:
+key_key.jei.toggleEditMode:key.keyboard.o:
 key_key.jei.toggleHideIngredient:key.mouse.right:
 key_key.jei.toggleWildcardHideIngredient:key.mouse.right:CONTROL
 key_key.jei.recipeBack:key.keyboard.unknown:
@@ -87,11 +91,11 @@ key_placebo.toggleWings:key.keyboard.unknown:
 key_key.sophisticatedbackpacks.open_backpack:key.keyboard.b:
 key_key.sophisticatedbackpacks.inventory_interaction:key.keyboard.unknown:
 key_key.sophisticatedbackpacks.tool_swap:key.keyboard.unknown:
-key_key.sophisticatedbackpacks.toggle_upgrade_5:key.keyboard.unknown:
-key_key.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.unknown:
 key_key.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.unknown:
-key_key.sophisticatedbackpacks.toggle_upgrade_3:key.keyboard.unknown:
+key_key.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.unknown:
+key_key.sophisticatedbackpacks.toggle_upgrade_5:key.keyboard.unknown:
 key_key.sophisticatedbackpacks.toggle_upgrade_4:key.keyboard.unknown:
+key_key.sophisticatedbackpacks.toggle_upgrade_3:key.keyboard.unknown:
 key_simulated.keyinfo.rotate_mode:key.keyboard.tab:
 key_simulated.keyinfo.scroll_up:key.keyboard.unknown:
 key_simulated.keyinfo.scroll_down:key.keyboard.unknown:
