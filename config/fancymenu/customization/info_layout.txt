@@ -3,14 +3,14 @@ type = fancymenu_layout
 layout-meta {
   identifier = %fancymenu:universal_layout%
   render_custom_elements_behind_vanilla = false
-  last_edited_time = 1778425622263
+  last_edited_time = 1778459189233
   is_enabled = false
   randommode = false
   randomgroup = 1
   randomonlyfirsttime = false
   layout_index = 0
   universal_layout_whitelist = title_screen;
-  [loading_requirement_container_meta:89352ec8-2fc8-4698-a759-af89ff667da7-1778432830146] = [groups:][instances:]
+  [loading_requirement_container_meta:270d0243-ca35-470b-8b94-5792b722f9f6-1778459189257] = [groups:][instances:]
 }
 
 menu_background {
@@ -351,7 +351,7 @@ layout_action_executable_blocks {
 
 element {
   interactable = true
-  source = - {"placeholder":"loadername"}: {"placeholder":"loaderver"}%n%- Minecraft: {"placeholder":"mcversion"}%n%- Create: {"placeholder":"modversion","values":{"modid":"create"}}%n%- Sodium: {"placeholder":"modversion","values":{"modid":"sodium"}}%n%- Mods: {"placeholder":"loadedmods"} / {"placeholder":"totalmods"}%n%- Java: {"placeholder":"jvmname"} - {"placeholder":"javaver"}%n%- You: 10.132.152.98 - 1812 Fairmount Ave, Richmond%n%  - Erik Toope: 721-07-4426
+  source = - {"placeholder":"loadername"}: {"placeholder":"loaderver"}%n%- Minecraft: {"placeholder":"mcversion"}%n%- Create: {"placeholder":"modversion","values":{"modid":"create"}}%n%- Sodium: {"placeholder":"modversion","values":{"modid":"sodium"}}%n%- Mods: {"placeholder":"loadedmods"} / {"placeholder":"totalmods"}%n%- Java: {"placeholder":"jvmname"} - {"placeholder":"javaver"}%n%- You: 10.132.152.98 - 1812 Fairmount Ave, Richmond%n%  - Christopher Toope: 721-07-4426
   source_mode = direct
   shadow = true
   enable_scrolling = true
