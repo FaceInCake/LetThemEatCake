@@ -147,3 +147,18 @@ com.seibel.distanthorizons.common.wrappers.gui.classicConfig.DhConfigScreen_neof
 journeymap.client.ui.waypointmanager.waypoint.WaypointEditor {
 }
 
+net.minecraft.client.gui.screens.options.MouseSettingsScreen {
+}
+
+com.matyrobbrt.keybindbundles.render.EditBoxScreen {
+}
+
+com.matyrobbrt.keybindbundles.render.KeyBundleModificationScreen {
+}
+
+net.minecraft.client.gui.screens.CreateBuffetWorldScreen {
+}
+
+net.minecraft.client.gui.screens.PresetFlatWorldScreen {
+}
+

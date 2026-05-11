@@ -3,14 +3,14 @@ type = fancymenu_layout
 layout-meta {
   identifier = %fancymenu:universal_layout%
   render_custom_elements_behind_vanilla = true
-  last_edited_time = 1778425442896
+  last_edited_time = 1778463862260
   is_enabled = true
   randommode = false
   randomgroup = 1
   randomonlyfirsttime = false
   layout_index = 0
-  universal_layout_whitelist = options_screen;video_settings_screen;online_options_screen;skin_customization_screen;sound_options_screen;controls_screen;language_select_screen;chat_options_screen;pack_selection_screen;accessibility_options_screen;credits_and_attribution_screen;net.caffeinemc.mods.sodium.client.gui.SodiumOptionsGUI;net.neoforged.neoforge.client.gui.ModListScreen;
-  [loading_requirement_container_meta:8f4154c5-6299-4a55-954d-bbde5493a01b-1778425427290] = [groups:][instances:5d1fedc2-9b5b-4f16-9b27-381c92192cd6-1777865686390;]
+  universal_layout_whitelist = options_screen;video_settings_screen;online_options_screen;skin_customization_screen;sound_options_screen;controls_screen;language_select_screen;chat_options_screen;pack_selection_screen;accessibility_options_screen;credits_and_attribution_screen;net.caffeinemc.mods.sodium.client.gui.SodiumOptionsGUI;net.neoforged.neoforge.client.gui.ModListScreen;net.minecraft.client.gui.screens.options.controls.KeyBindsScreen;mouse_settings_screen;com.matyrobbrt.keybindbundles.render.EditBoxScreen;com.matyrobbrt.keybindbundles.render.KeyBundleModificationScreen;
+  [loading_requirement_container_meta:9d84863b-e1b8-4747-b363-7972d4591cf7-1778463857905] = [groups:][instances:5d1fedc2-9b5b-4f16-9b27-381c92192cd6-1777865686390;]
   [loading_requirement:fancymenu_loading_requirement_is_world_loaded][requirement_mode:if_not][req_id:5d1fedc2-9b5b-4f16-9b27-381c92192cd6-1777865686390] = 
 }
 
