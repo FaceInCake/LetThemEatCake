@@ -44,7 +44,7 @@ toggleSprint:false
 darkMojangStudiosBackground:false
 hideLightningFlashes:false
 hideSplashTexts:false
-mouseSensitivity:0.1267605633802817
+mouseSensitivity:0.8
 damageTiltStrength:0.1056338028169014
 highContrast:false
 narratorHotkey:false
@@ -65,7 +65,7 @@ overrideHeight:0
 chatHeightFocused:1.0
 chatDelay:0.0
 chatHeightUnfocused:0.4375
-chatScale:0.7535211267605634
+chatScale:0.75
 chatWidth:1.0
 notificationDisplayTime:0.5
 useNativeTransport:true
