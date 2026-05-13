@@ -6,15 +6,13 @@ scheduler_instance {
   scheduler_start_on_launch = true
   scheduler_start_delay_ms = 0
   scheduler_tick_delay_ms = 0
-  scheduler_ticks_to_run = 0
-  [executable_action_instance:b65051eb-65bb-4c20-9e25-3e64815793ef-1778467031385][action_type:print_to_log] = On launch schedule running
-  [executable_action_instance:7c422fe4-0122-44d1-8c23-3d679b6c15c8-1778467416640][action_type:print_to_log] = Copying the keybundles file
+  scheduler_ticks_to_run = 1
   [executable_action_instance:928197bd-09b6-4f65-a63d-c74a62ff7455-1778467100748][action_type:copy_file_in_game_dir] = /config/defaultoptions/keybind_bundles.json||/keybind_bundles.json
-  [executable_block:74e9ea13-1fd6-42f8-89a7-27b3b4b58822-1778467135799][type:if] = [executables:7c422fe4-0122-44d1-8c23-3d679b6c15c8-1778467416640;928197bd-09b6-4f65-a63d-c74a62ff7455-1778467100748;]
+  [executable_block:74e9ea13-1fd6-42f8-89a7-27b3b4b58822-1778467135799][type:if] = [executables:928197bd-09b6-4f65-a63d-c74a62ff7455-1778467100748;]
   [if_executable_block_body:74e9ea13-1fd6-42f8-89a7-27b3b4b58822-1778467135799] = 4b734674-b46d-46e0-964a-09967060ce8d-1778467104658
   [loading_requirement_container_meta:4b734674-b46d-46e0-964a-09967060ce8d-1778467104658] = [groups:][instances:a2a2d6b4-7fe5-43d2-b408-7c8e79da6514-1778467107698;]
-  [loading_requirement:fancymenu_loading_requirement_file_exists][requirement_mode:if_not][req_id:a2a2d6b4-7fe5-43d2-b408-7c8e79da6514-1778467107698] = /keybind_bundles.json
+  [loading_requirement:fancymenu_loading_requirement_file_exists][requirement_mode:if_not][req_id:a2a2d6b4-7fe5-43d2-b408-7c8e79da6514-1778467107698] = keybind_bundles.json
   [if_executable_block_collapsed:74e9ea13-1fd6-42f8-89a7-27b3b4b58822-1778467135799] = false
-  [executable_block:a3d60358-6306-4a15-a6ea-a32442539891-1778466908426][type:generic] = [executables:b65051eb-65bb-4c20-9e25-3e64815793ef-1778467031385;74e9ea13-1fd6-42f8-89a7-27b3b4b58822-1778467135799;]
+  [executable_block:a3d60358-6306-4a15-a6ea-a32442539891-1778466908426][type:generic] = [executables:74e9ea13-1fd6-42f8-89a7-27b3b4b58822-1778467135799;]
 }
 

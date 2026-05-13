@@ -10,7 +10,7 @@ layout-meta {
   randomonlyfirsttime = false
   layout_index = 0
   universal_layout_whitelist = title_screen;
-  [loading_requirement_container_meta:270d0243-ca35-470b-8b94-5792b722f9f6-1778459189257] = [groups:][instances:]
+  [loading_requirement_container_meta:11b901d9-de9a-4e16-843b-0938f1da456e-1778471189803] = [groups:][instances:]
 }
 
 menu_background {
