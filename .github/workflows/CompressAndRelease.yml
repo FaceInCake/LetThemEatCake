@@ -9,36 +9,39 @@ on:
         type: string
 
 permissions:
-  contents: write # Required to push tags and create releases
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # Fetch all history so we can push tags
-
-      - name: Create ZIP archive while excluding metadata
+      - name: Clone repository (using GITHUB_TOKEN)
         run: |
-          zip -r LetThemEatCake-${{ github.event.inputs.version }}.zip . \
+          git clone --depth 1 \
+            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git repo
+          cd repo
+          git fetch --unshallow   # needed for creating tags
+
+      - name: Create ZIP archive (excluding README and .git)
+        run: |
+          cd repo
+          zip -r ../release.zip . \
             -x "README*" \
-            -x ".git/*" \
-            -x ".github/*"
+            -x ".github/*" \
+            -x ".git/*"
 
-      - name: Create tag
+      - name: Create Git tag and push
         run: |
+          cd repo
           git tag ${{ github.event.inputs.version }}
           git push origin ${{ github.event.inputs.version }}
 
-      - name: Create release and upload zip file
+      - name: Create GitHub Release and upload asset
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create ${{ github.event.inputs.version }} \
-            ./LetThemEatCake-${{ github.event.inputs.version }}.zip \
-            --title "Let Them Eat Cake ${{ github.event.inputs.version }}" \
+          gh release create LetThemEatCake-${{ github.event.inputs.version }} \
+            ./release.zip \
+            --title "LetThemEatCake-${{ github.event.inputs.version }}" \
             --notes "Release ${{ github.event.inputs.version }}" \
-            --target ${{ github.sha }}
+            --repo ${{ github.repository }}
