@@ -30,11 +30,11 @@ jobs:
             -x ".github/*" \
             -x ".git/*"
 
-      - name: Create Git tag and push
-        run: |
-          cd repo
-          git tag ${{ github.event.inputs.version }}
-          git push origin ${{ github.event.inputs.version }}
+      # - name: Create Git tag and push
+      #   run: |
+      #     cd repo
+      #     git tag ${{ github.event.inputs.version }}
+      #     git push origin ${{ github.event.inputs.version }}
 
       - name: Create GitHub Release and upload asset
         env:
