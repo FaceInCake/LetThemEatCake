@@ -120,7 +120,8 @@ key_key.journeymap.toggle_render_waypoints_map:key.keyboard.unknown:
 key_key.journeymap.fullscreen.south:key.keyboard.s:
 key_key.journeymap.zoom_in:key.keyboard.equal:
 key_key.journeymap.fullscreen.north:key.keyboard.w:
-key_key.journeymap.fullscreen_waypoints:key.keyboard.m:
+key_key.journeymap.fullscreen_waypoints:key.keyboard.unknown:
+key_key.journeymap.map_toggle_alt:key.keyboard.m
 key_key.journeymap.toggle_render_waypoints_world:key.keyboard.unknown:
 key_key.journeymap.fullscreen.east:key.keyboard.d:
 key_key.journeymap.zoom_out:key.keyboard.minus:
