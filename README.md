@@ -1,3 +1,5 @@
+[![Compress and Release](https://github.com/FaceInCake/LetThemEatCake/actions/workflows/CompressAndRelease.yml/badge.svg?branch=technic&event=release)](https://github.com/FaceInCake/LetThemEatCake/actions/workflows/CompressAndRelease.yml)
+
 # Vision
 This modpack is largely Create, with Create: Aeronautics, and some other additions.
 
