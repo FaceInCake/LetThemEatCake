@@ -118,6 +118,18 @@
     "processingTime": 200
 });
 
+// Allow dirt paths to be mixed back into dirt, so players can more easily trace through JEI the infinite dirt automation
+<recipetype:create:mixing>.addJsonRecipe("dirt_from_dirt_path", {
+    "type": "create:mixing",
+    "ingredients": [
+        { "item": "minecraft:dirt_path" }
+    ],
+    "results": [
+        { "id": "minecraft:dirt", "count": 1 }
+    ],
+    "processingTime": 200
+});
+
 // Increase stack size
 <item:createdeco:brass_coin>.definition.maxStackSize = 99;
 <item:createdeco:copper_coin>.definition.maxStackSize = 99;
