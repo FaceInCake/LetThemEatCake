@@ -1,0 +1,47 @@
+name: Compress and Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version string for tag and release (ex: v1.0.0 or server-v1.0.0)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repository (using GITHUB_TOKEN)
+        run: |
+          git clone --branch ${{ github.ref_name }} --depth 1 \
+            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git repo
+          cd repo
+          git fetch --unshallow   # needed for creating tags
+
+      - name: Create ZIP archive (excluding README and .git)
+        run: |
+          cd repo
+          zip -r ../release.zip . \
+            -x "README*" \
+            -x ".github/*" \
+            -x ".git/*"
+
+      # - name: Create Git tag and push
+      #   run: |
+      #     cd repo
+      #     git tag ${{ github.event.inputs.version }}
+      #     git push origin ${{ github.event.inputs.version }}
+
+      - name: Create GitHub Release and upload asset
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create LetThemEatCake-${{ github.event.inputs.version }} \
+            ./release.zip \
+            --title "LetThemEatCake-${{ github.event.inputs.version }}" \
+            --notes "Release ${{ github.event.inputs.version }}" \
+            --repo ${{ github.repository }}
