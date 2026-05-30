@@ -118,3 +118,65 @@
     "processingTime": 200
 });
 
+// Increase stack size
+<item:createdeco:brass_coin>.definition.maxStackSize = 99;
+<item:createdeco:copper_coin>.definition.maxStackSize = 99;
+<item:createdeco:iron_coin>.definition.maxStackSize = 99;
+<item:createdeco:gold_coin>.definition.maxStackSize = 99;
+<item:createdeco:netherite_coin>.definition.maxStackSize = 99;
+<item:createdeco:industrial_iron_coin>.definition.maxStackSize = 99;
+<item:createdeco:zinc_coin>.definition.maxStackSize = 99;
+
+<item:createdeco:brass_coinstack>.definition.maxStackSize = 99;
+<item:createdeco:copper_coinstack>.definition.maxStackSize = 99;
+<item:createdeco:iron_coinstack>.definition.maxStackSize = 99;
+<item:createdeco:gold_coinstack>.definition.maxStackSize = 99;
+<item:createdeco:netherite_coinstack>.definition.maxStackSize = 99;
+<item:createdeco:industrial_iron_coinstack>.definition.maxStackSize = 99;
+<item:createdeco:zinc_coinstack>.definition.maxStackSize = 99;
+
+// Allow coin stacks to be blasted into ingots
+blastFurnace.addRecipe("copper_coinstack2ingot", <item:minecraft:copper_ingot>, <item:createdeco:copper_coinstack>, 0.0, 5*20);
+blastFurnace.addRecipe("zinc_coinstack2ingot", <item:create:zinc_ingot>, <item:createdeco:zinc_coinstack>, 0.0, 5*20);
+blastFurnace.addRecipe("iron_coinstack2ingot", <item:minecraft:iron_ingot>, <item:createdeco:iron_coinstack>, 0.0, 5*20);
+blastFurnace.addRecipe("brass_coinstack2ingot", <item:create:brass_ingot>, <item:createdeco:brass_coinstack>, 0.0, 5*20);
+blastFurnace.addRecipe("netherite_coinstack2ingot", <item:minecraft:netherite_ingot>, <item:createdeco:netherite_coinstack>, 0.0, 5*20);
+blastFurnace.addRecipe("industrial_iron_coinstack2ingot", <item:createdeco:industrial_iron_ingot>, <item:createdeco:industrial_iron_coinstack>, 0.0, 5*20);
+blastFurnace.addRecipe("gold_coinstack2ingot", <item:minecraft:gold_ingot>, <item:createdeco:gold_coinstack>, 0.0, 5*20);
+
+// Add back coin recipes through sheets instead
+<recipetype:create:pressing>.addJsonRecipe("iron_coin_from_sheet", {
+    "type": "create:pressing",
+    "ingredients": [{ "item": "create:iron_sheet" }],
+    "results": [{ "id": "createdeco:iron_coin", "count": 4 }]
+});
+<recipetype:create:pressing>.addJsonRecipe("gold_coin_from_sheet", {
+    "type": "create:pressing",
+    "ingredients": [{ "item": "create:golden_sheet" }],
+    "results": [{ "id": "createdeco:gold_coin", "count": 4 }]
+});
+<recipetype:create:pressing>.addJsonRecipe("brass_coin_from_sheet", {
+    "type": "create:pressing",
+    "ingredients": [{ "item": "create:brass_sheet" }],
+    "results": [{ "id": "createdeco:brass_coin", "count": 4 }]
+});
+<recipetype:create:pressing>.addJsonRecipe("copper_coin_from_sheet", {
+    "type": "create:pressing",
+    "ingredients": [{ "item": "create:copper_sheet" }],
+    "results": [{ "id": "createdeco:copper_coin", "count": 4 }]
+});
+<recipetype:create:pressing>.addJsonRecipe("zinc_coin_from_sheet", {
+    "type": "create:pressing",
+    "ingredients": [{ "item": "createdeco:zinc_sheet" }],
+    "results": [{ "id": "createdeco:zinc_coin", "count": 4 }]
+});
+<recipetype:create:pressing>.addJsonRecipe("netherite_coin_from_ingot", {
+    "type": "create:pressing",
+    "ingredients": [{ "item": "minecraft:netherite_ingot" }],
+    "results": [{ "id": "createdeco:netherite_coin", "count": 4 }]
+});
+<recipetype:create:pressing>.addJsonRecipe("industrial_iron_from_ingot", {
+    "type": "create:pressing",
+    "ingredients": [{ "item": "createdeco:industrial_iron_ingot" }],
+    "results": [{ "id": "createdeco:industrial_iron_coin", "count": 4 }]
+});
