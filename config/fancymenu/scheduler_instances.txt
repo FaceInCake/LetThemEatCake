@@ -4,9 +4,9 @@ scheduler_instance {
   scheduler_identifier = load_keybundles_schedule
   scheduler_action_script_identifier = a3d60358-6306-4a15-a6ea-a32442539891-1778466908426
   scheduler_start_on_launch = true
-  scheduler_start_delay_ms = 0
-  scheduler_tick_delay_ms = 0
-  scheduler_ticks_to_run = 1
+  scheduler_start_delay_ms = 50
+  scheduler_tick_delay_ms = 150
+  scheduler_ticks_to_run = 3
   [executable_action_instance:928197bd-09b6-4f65-a63d-c74a62ff7455-1778467100748][action_type:copy_file_in_game_dir] = /config/defaultoptions/keybind_bundles.json||/keybind_bundles.json
   [executable_block:74e9ea13-1fd6-42f8-89a7-27b3b4b58822-1778467135799][type:if] = [executables:928197bd-09b6-4f65-a63d-c74a62ff7455-1778467100748;]
   [if_executable_block_body:74e9ea13-1fd6-42f8-89a7-27b3b4b58822-1778467135799] = 4b734674-b46d-46e0-964a-09967060ce8d-1778467104658
