@@ -46,4 +46,4 @@ jobs:
             --title "LetThemEatCake-${{ github.event.inputs.version }}" \
             --notes "Release ${{ github.event.inputs.version }}" \
             --repo ${{ github.repository }} \
-            --target ${{ env.COMMIT_SHA }}
+            --target ${{ github.ref_name }}
