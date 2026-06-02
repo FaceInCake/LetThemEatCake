@@ -20,7 +20,8 @@ jobs:
           git clone --branch ${{ github.ref_name }} --depth 1 \
             https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git repo
           cd repo
-          git fetch --unshallow   # needed for creating tags
+          # Capture the commit SHA of HEAD on this branch
+          echo "COMMIT_SHA=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
       - name: Create ZIP archive (excluding README and .git)
         run: |
@@ -45,4 +46,4 @@ jobs:
             --title "LetThemEatCake-${{ github.event.inputs.version }}" \
             --notes "Release ${{ github.event.inputs.version }}" \
             --repo ${{ github.repository }} \
-            --target ${{ github.env.COMMIT_SHA }}
+            --target ${{ env.COMMIT_SHA }}
