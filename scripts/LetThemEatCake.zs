@@ -156,39 +156,58 @@ blastFurnace.addRecipe("netherite_coinstack2ingot", <item:minecraft:netherite_in
 blastFurnace.addRecipe("industrial_iron_coinstack2ingot", <item:createdeco:industrial_iron_ingot>, <item:createdeco:industrial_iron_coinstack>, 0.0, 5*20);
 blastFurnace.addRecipe("gold_coinstack2ingot", <item:minecraft:gold_ingot>, <item:createdeco:gold_coinstack>, 0.0, 5*20);
 
-// Add back coin recipes through sheets instead
-<recipetype:create:pressing>.addJsonRecipe("iron_coin_from_sheet", {
-    "type": "create:pressing",
-    "ingredients": [{ "item": "create:iron_sheet" }],
-    "results": [{ "id": "createdeco:iron_coin", "count": 4 }]
-});
-<recipetype:create:pressing>.addJsonRecipe("gold_coin_from_sheet", {
-    "type": "create:pressing",
-    "ingredients": [{ "item": "create:golden_sheet" }],
-    "results": [{ "id": "createdeco:gold_coin", "count": 4 }]
-});
-<recipetype:create:pressing>.addJsonRecipe("brass_coin_from_sheet", {
-    "type": "create:pressing",
-    "ingredients": [{ "item": "create:brass_sheet" }],
-    "results": [{ "id": "createdeco:brass_coin", "count": 4 }]
-});
-<recipetype:create:pressing>.addJsonRecipe("copper_coin_from_sheet", {
-    "type": "create:pressing",
-    "ingredients": [{ "item": "create:copper_sheet" }],
-    "results": [{ "id": "createdeco:copper_coin", "count": 4 }]
-});
-<recipetype:create:pressing>.addJsonRecipe("zinc_coin_from_sheet", {
-    "type": "create:pressing",
-    "ingredients": [{ "item": "createdeco:zinc_sheet" }],
-    "results": [{ "id": "createdeco:zinc_coin", "count": 4 }]
-});
-<recipetype:create:pressing>.addJsonRecipe("netherite_coin_from_ingot", {
-    "type": "create:pressing",
-    "ingredients": [{ "item": "minecraft:netherite_ingot" }],
-    "results": [{ "id": "createdeco:netherite_coin", "count": 4 }]
-});
-<recipetype:create:pressing>.addJsonRecipe("industrial_iron_from_ingot", {
-    "type": "create:pressing",
-    "ingredients": [{ "item": "createdeco:industrial_iron_ingot" }],
-    "results": [{ "id": "createdeco:industrial_iron_coin", "count": 4 }]
-});
+
+function addCoinDeployRecipe(inputStr as string, material as string) as void {
+    <recipetype:create:deploying>.addJsonRecipe(material + "_coin_from_hoe", {
+        "type": "create:deploying",
+        "ingredients": [
+            { "item": inputStr },
+            { "item": "minecraft:netherite_hoe", "keepItem": true }
+        ],
+        "results": [
+            {
+                "id": "createdeco:"+material+"_coin",
+                "count": 1
+            }
+        ]
+    });
+}
+
+addCoinDeployRecipe("create:golden_sheet", "gold");
+addCoinDeployRecipe("create:brass_sheet", "brass");
+addCoinDeployRecipe("createdeco:zinc_sheet", "zinc");
+addCoinDeployRecipe("create:iron_sheet", "iron");
+addCoinDeployRecipe("create:copper_sheet", "copper");
+addCoinDeployRecipe("createdeco:industrial_iron_sheet", "industrial_iron");
+addCoinDeployRecipe("minecraft:netherite_ingot", "netherite");
+
+
+
+// Rework the Sheets recipe
+recipes.removeByRegex("handcrafted:[a-z_]+_sheet");
+recipes.removeByRegex("handcrafted:[a-z_]+_cushion");
+
+var colours = [
+    "white", "light_gray", "gray", "black",
+    "red", "orange", "yellow", "lime",
+    "green", "cyan", "light_blue", "blue",
+    "magenta", "purple", "pink", "brown"
+] as string[];
+
+for colour in colours {
+	var wool = <item:minecraft:${colour}_wool>;
+    var sheet = <item:handcrafted:${colour}_sheet>;
+	var cushion = <item:handcrafted:${colour}_cushion>;
+	
+    craftingTable.addShaped("wool_to_"+colour+"_sheet", sheet * 3, [
+        [wool, wool, wool],
+        [<item:minecraft:string>, <item:minecraft:string>, <item:minecraft:string>],
+        [wool, wool, wool]
+    ]);
+	
+	craftingTable.addShaped("wool_to_"+colour+"_cushion", cushion * 3, [
+		[wool, wool, wool],
+		[<item:minecraft:feather>, <item:minecraft:feather>, <item:minecraft:feather>],
+		[wool, wool, wool]
+	]);
+}
