@@ -44,5 +44,5 @@ jobs:
             ./release.zip \
             --title "LetThemEatCake-${{ github.event.inputs.version }}" \
             --notes "Release ${{ github.event.inputs.version }}" \
-            --repo ${{ github.repository }}
-            --target ${{ env.COMMIT_SHA }}
+            --repo ${{ github.repository }} \
+            --target ${{ github.env.COMMIT_SHA }}
