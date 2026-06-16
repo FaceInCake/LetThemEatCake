@@ -172,4 +172,10 @@ Finally, there's a lot of MCaw's stuff, Chipped, Beautify, and a few others so t
 <li><a href="https://www.curseforge.com/minecraft/mc-mods/better-tridents">Better Tridents (by Fuzs)</a></li>
 <li><a href="https://www.curseforge.com/minecraft/mc-mods/create-sound-of-steam">Create: Sound of Steam (by finchymcfinch)</a></li>
 <li><a href="https://www.curseforge.com/minecraft/mc-mods/c2me">C2ME</a></li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/sodium">Sodium</a></li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/irisshaders">Iris Shaders</a></li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/iris-flywheel-compat">Iris FlyWheel Compat</a></li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/create-bits-n-bobs">Create: Bits 'n' Bobs</a></li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/create-lazytick">Create: Lazy Tick</a></li>
+<li><a href="https://www.curseforge.com/minecraft/mc-mods/multiplayer-server-pause-forge">Multiplayer Server Pause</a></li>
 </ul>
