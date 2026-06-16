@@ -3,12 +3,12 @@
     "type": "create:mixing",
     "heat_requirement": "heated",
     "ingredients": [
-        { "item": "minecraft:blackstone" },
-        { "item": "minecraft:blackstone" },
+        { "item": "minecraft:andesite" },
+        { "item": "minecraft:andesite" },
         { "item": "minecraft:glowstone_dust" }
     ],
     "results": [
-		{ "id": "minecraft:cobbled_deepslate", "count": 1 },
+		{ "id": "create:scoria", "count": 1 },
         { "id": "create:ochrum", "count": 1, "chance": 0.5 }
     ],
     "processingTime": 250
@@ -29,29 +29,15 @@
     "processingTime": 250
 });
 
-<recipetype:create:mixing>.addJsonRecipe("asurine_from_lapis_and_quartz_and_packed_mud", {
-    "type": "create:mixing",
-    "heat_requirement": "heated",
-    "ingredients": [
-        { "item": "minecraft:packed_mud" },
-        { "item": "minecraft:packed_mud" },
-		{ "item": "minecraft:lapis_lazuli" },
-		{ "item": "minecraft:quartz" }
-    ],
-    "results": [
-        { "id": "minecraft:sand", "count": 1 },
-        { "id": "create:asurine", "count": 1, "chance": 0.5 },
-		{ "id": "minecraft:lapis_lazuli", "count": 1, "chance": 0.9 }
-    ],
-    "processingTime": 200
-});
+// Blasting ausrine into lapis
+blastFurnace.addRecipe("lapis_from_asurine", <item:minecraft:lapis_lazuli>, <item:create:asurine>, 0.0, 5*20);
 
-<recipetype:create:mixing>.addJsonRecipe("asurine_from_amethyst_and_packed_mud", {
+<recipetype:create:mixing>.addJsonRecipe("asurine_from_amethyst_and_basalt", {
     "type": "create:mixing",
     "heat_requirement": "heated",
     "ingredients": [
-        { "item": "minecraft:packed_mud" },
-        { "item": "minecraft:packed_mud" },
+        { "item": "minecraft:basalt" },
+        { "item": "minecraft:basalt" },
         { "item": "minecraft:amethyst_shard" }
     ],
     "results": [
@@ -61,13 +47,14 @@
     "processingTime": 250
 });
 
-<recipetype:create:mixing>.addJsonRecipe("veridium_from_redstone_and_slime_and_deepslate", {
-    "type": "create:mixing",
+<recipetype:create:compacting>.addJsonRecipe("veridium_from_redstone_and_packed_mud", {
+    "type": "create:compacting",
     "heat_requirement": "heated",
     "ingredients": [
-        { "item": "minecraft:deepslate" },
+        { "type": "neoforge:single", "amount": 100, "fluid": "minecraft:lava" },
+        { "item": "minecraft:packed_mud" },
         { "item": "minecraft:redstone" },
-		{ "item": "minecraft:slime_ball" }
+        { "item": "minecraft:redstone" }
     ],
     "results": [
         { "id": "minecraft:dripstone_block", "count": 1 },
@@ -90,20 +77,6 @@
     "processingTime": 250
 });
 
-<recipetype:create:mixing>.addJsonRecipe("white_dye_from_wool", {
-    "type": "create:mixing",
-    "heat_requirement": "none",
-    "ingredients": [
-		{ "type": "neoforge:single", "amount": 125, "fluid": "minecraft:water" },
-        { "item": "minecraft:white_wool" }
-    ],
-    "results": [
-        { "id": "minecraft:white_dye", "count": 1 },
-        { "id": "minecraft:string", "count": 2, "chance": 0.5 }
-    ],
-    "processingTime": 300
-});
-
 <recipetype:create:compacting>.addJsonRecipe("calcite_from_clay_and_smooth_white_sandstone", {
     "type": "create:compacting",
     "ingredients": [
@@ -113,12 +86,67 @@
 		{ "item": "minecraft:clay_ball" }
     ],
     "results": [
-        { "id": "minecraft:calcite", "count": 1 },
+        { "id": "minecraft:calcite", "count": 2 },
     ],
     "processingTime": 200
 });
 
-// Allow dirt paths to be mixed back into dirt, so players can more easily trace through JEI the infinite dirt automation
+<recipetype:create:compacting>.addJsonRecipe("limestone_from_smooth_white_sandstone_and_quartz", {
+    "type": "create:compacting",
+    "ingredients": [
+        { "type": "neoforge:single", "amount": 100, "fluid": "minecraft:lava" },
+        { "item": "biomeswevegone:smooth_white_sandstone" },
+        { "item": "minecraft:quartz" }
+    ],
+    "results": [
+        { "id": "create:limestone", "count": 1 }
+    ],
+    "processingTime": 200
+});
+
+<recipetype:create:compacting>.addJsonRecipe("dripstone_from_amethyst_and_clay", {
+    "type": "create:compacting",
+    "ingredients": [
+        { "type": "neoforge:single", "amount": 250, "fluid": "minecraft:water" },
+        { "item": "minecraft:amethyst_shard" },
+        { "item": "minecraft:clay_ball" },
+        { "item": "minecraft:clay_ball" },
+    ],
+    "results": [
+        { "id": "minecraft:amethyst_shard", "count": 1, "chance": 0.2 },
+        { "id": "minecraft:pointed_dripstone", "count": 1 }
+    ],
+    "processingTime": 200
+});
+
+<recipetype:create:compacting>.addJsonRecipe("netherrack_from_diorite_and_wart", {
+    "type": "create:compacting",
+    "ingredients": [
+        { "type": "neoforge:single", "amount": 125, "fluid": "minecraft:lava" },
+        { "item": "minecraft:nether_wart" },
+        { "item": "minecraft:diorite" },
+        { "item": "minecraft:diorite" }
+    ],
+    "results": [
+        { "id": "minecraft:netherrack", "count": 2 }
+    ],
+    "processingTime": 200
+});
+
+<recipetype:create:compacting>.addJsonRecipe("basalt_from_blackstone_and_clay", {
+    "type": "create:compacting",
+    "ingredients": [
+        { "item": "minecraft:blackstone" },
+        { "item": "minecraft:clay_ball" },
+        { "type": "neoforge:single", "amount": 100, "fluid": "minecraft:lava" }
+    ],
+    "results": [
+        { "id": "minecraft:basalt", "count": 1 }
+    ],
+    "processingTime": 200
+});
+
+// Allow dirt paths to be mixed back into dirt, so players can more easily trace through JEI and find the infinite dirt automation
 <recipetype:create:mixing>.addJsonRecipe("dirt_from_dirt_path", {
     "type": "create:mixing",
     "ingredients": [
@@ -129,6 +157,32 @@
     ],
     "processingTime": 200
 });
+
+var colours = [
+    "white", "light_gray", "gray", "black",
+    "red", "orange", "yellow", "lime",
+    "green", "cyan", "light_blue", "blue",
+    "magenta", "purple", "pink", "brown"
+] as string[];
+
+function dyeFromWashingWool(colour as string) as void {
+    <recipetype:create:mixing>.addJsonRecipe(colour+"_dye_from_wool", {
+        "type": "create:mixing",
+        "heat_requirement": "none",
+        "ingredients": [
+            { "type": "neoforge:single", "amount": 125, "fluid": "minecraft:water" },
+            { "item": "minecraft:"+colour+"_wool" }
+        ],
+        "results": [
+            { "id": "minecraft:"+colour+"_dye", "count": 1 },
+            { "id": "minecraft:string", "count": 2, "chance": 0.5 }
+        ],
+        "processingTime": 300
+    });
+}
+for colour in colours {
+    dyeFromWashingWool(colour);
+}
 
 // Increase stack size
 <item:createdeco:brass_coin>.definition.maxStackSize = 99;
@@ -186,13 +240,6 @@ addCoinDeployRecipe("minecraft:netherite_ingot", "netherite");
 // Rework the Sheets recipe
 recipes.removeByRegex("handcrafted:[a-z_]+_sheet");
 recipes.removeByRegex("handcrafted:[a-z_]+_cushion");
-
-var colours = [
-    "white", "light_gray", "gray", "black",
-    "red", "orange", "yellow", "lime",
-    "green", "cyan", "light_blue", "blue",
-    "magenta", "purple", "pink", "brown"
-] as string[];
 
 for colour in colours {
 	var wool = <item:minecraft:${colour}_wool>;
